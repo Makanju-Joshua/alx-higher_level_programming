@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-# 1-search_replace.py
 
 
 def search_replace(my_list, search, replace):
-    """Replace all occurrences of an element by another in a new list."""
+    if my_list is None:
+        return
     new_list = my_list[:]
-    for i in range(len(new_list)):
-        if new_list[i] == search:
-            new_list[i] = replace
-            return (new_list)
+    for idx, c in enumerate(new_list):
+        if c == search:
+            new_list[idx] = replace
+            return new_list
